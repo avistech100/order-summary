@@ -1,0 +1,122 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'red-hat';
+    src: url(Red_Hat_Display/RedHatDisplay-VariableFont_wght.ttf);
+}
+:root{
+    --radius: 10px;
+    --img-radius: 18px;
+}
+.main{
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 450px;
+    color: hsl(224, 23%, 55%);
+    margin: 100px auto;
+}
+body{
+    font-size: 16px;
+    background: hsl(225, 100%, 94%);
+    background-image: url(images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+}
+.music{
+    width: 100%;
+    height: 100%;
+    border-top-right-radius: var(--img-radius);
+    border-top-left-radius: var(--img-radius);
+}
+.min-main1{
+    border-top-right-radius: var(--img-radius);
+    border-top-left-radius: var(--img-radius);
+    width: 100%;
+}
+.min-main2{
+    text-align: center;
+    font-family: 'red-hat';
+    padding: 20px 50px;
+    font-weight: 500;
+    width: 100%;
+    background-color: white;
+    border-bottom-right-radius: var(--img-radius);
+    border-bottom-left-radius: var(--img-radius);
+
+}
+.ash{
+    display: flex;
+    align-items: center;
+    background-color:  hsl(225, 100%, 98%);
+    padding: 18px 25px;
+    border-radius: var(--radius);
+}
+a{
+    margin-left: auto;
+    font-weight: 700;
+}
+h2{
+    font-weight: 900;
+}
+h2, .annual, .cancle{
+    color: hsl(222, 48%, 23%);
+}
+h3, .price{
+    margin: 0;
+    padding: 1px 10px;
+}
+.annual{
+    font-weight: 700;
+}
+.change:hover, button:hover, .cancle:hover{
+    cursor: pointer;
+}
+button:hover{
+    background-color: hsla(245, 75%, 52%, 0.726);
+}
+button{
+    color: white;
+    width: 100%;
+    padding: 17px;
+    font-family: 'red-hat';
+    background-color: hsl(245, 75%, 52%);
+    border: none;
+    letter-spacing: .8px;
+    border-radius: var(--radius);
+    font-size: 14px;
+    font-weight: 700;
+    margin: 35px 0;
+    box-shadow: 0 25px 10px hsla(224, 23%, 55%, 0.205);
+}
+@media (max-width: 430px) {
+    body{
+        background-image: url(images/pattern-background-mobile.svg);
+    }
+    .main{
+        display: block;
+        margin: 50px 10px;
+        max-width: 375px;
+        
+    }
+    p, .annual, .change{
+        font-size: 14px;
+    }
+    .min-main1{
+        height: 40vw;
+    }
+    .music{
+        margin: 0;
+    }
+    .ash{
+        padding: 10px;
+    }
+       
+}
+@media (max-width: 370px){
+    p, .annual, .change{
+        font-size: .7rem;
+    }
+    button, .cancle{
+        font-size: .6rem;
+    }
+}
